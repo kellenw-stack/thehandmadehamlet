@@ -1,0 +1,283 @@
+/* ============================================================
+   The Handmade Hamlet — Colors & Type
+   Pulled from logo: sky blue field, mustard "Hamlet" text,
+   soft pig pink, and ink-black hand lettering.
+   ============================================================ */
+
+/* ---- Brand font: Fredoka (uploaded variable font) ---- */
+@font-face {
+  font-family: 'Fredoka';
+  src: url('fonts/Fredoka-VariableFont_wdth_wght.ttf') format('truetype-variations'),
+       url('fonts/Fredoka-VariableFont_wdth_wght.ttf') format('truetype');
+  font-weight: 300 700;
+  font-stretch: 75% 125%;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* ---- Body + accent fonts (Google Fonts — see README "Fonts") ---- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Kalam:wght@400;700&family=Caveat:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+:root {
+  /* ---------- COLOR SCALES ---------- */
+
+  /* Hamlet Blue — the brand's signature backdrop
+     Used for backgrounds, large sections, web background. */
+  --sky-50:  #effaff;
+  --sky-100: #d4f0fb;
+  --sky-200: #aee4f8;   /* HAMLET BLUE — brand signature */
+  --sky-300: #82d3f0;
+  --sky-400: #4ebbe1;
+  --sky-500: #229dc6;
+  --sky-600: #157aa0;
+  --sky-700: #0f5b78;
+
+  /* Spotlight Yellow — energy, CTAs, pattern highlights
+     The light golden "on-stage" yellow. */
+  --mustard-50:  #fffbe6;
+  --mustard-100: #fff1b3;
+  --mustard-200: #fee57e;   /* SPOTLIGHT YELLOW — brand signature */
+  --mustard-300: #fee57e;   /* alias — used by components as primary CTA */
+  --mustard-400: #f5cc3a;
+  --mustard-500: #d9a91a;
+  --mustard-600: #a77e0c;
+
+  /* Showtime Pink — Hamlet the pig's color; accents & details */
+  --pink-50:  #fef3f6;
+  --pink-100: #fde0e8;
+  --pink-200: #fbd2dd;
+  --pink-300: #f7c1d1;   /* SHOWTIME PINK — brand signature */
+  --pink-400: #ea91ab;
+  --pink-500: #cf6a89;
+
+  /* ---------- BRAND-NAMED ALIASES (use these in copy/docs) ---------- */
+  --hamlet-blue:      var(--sky-200);
+  --spotlight-yellow: var(--mustard-200);
+  --showtime-pink:    var(--pink-300);
+
+  /* Ink — hand-drawn line work, body copy */
+  --ink-900: #121212;
+  --ink-800: #1f1f1f;
+  --ink-700: #2c2c2c;
+  --ink-600: #4a4a4a;
+  --ink-500: #6e6e6e;
+  --ink-400: #9a9a9a;
+  --ink-300: #c8c8c8;
+  --ink-200: #e3e1dc;
+  --ink-100: #efece6;
+  --ink-50:  #faf7f1;   /* cream paper */
+
+  /* Accent — sparingly used, for callouts / errors / sale */
+  --tomato-300: #f08a6e;     /* warm coral accent */
+  --tomato-500: #d4502d;
+  --moss-300:   #9bbe7a;     /* soft sage / "added" */
+  --moss-500:   #5e8a3b;
+  --plum-500:   #6a3a6e;     /* the witty/subversive note */
+
+  /* ---------- SEMANTIC TOKENS ---------- */
+  --bg:           var(--ink-50);        /* cream paper, not pure white */
+  --bg-sky:       var(--sky-200);       /* hero / brand surface */
+  --bg-card:      #ffffff;
+  --bg-muted:     var(--ink-100);
+  --surface-pop:  var(--mustard-100);   /* highlight / sticker */
+
+  --fg:           var(--ink-900);
+  --fg-soft:      var(--ink-700);
+  --fg-muted:     var(--ink-500);
+  --fg-inverse:   var(--ink-50);
+
+  --border:       var(--ink-200);
+  --border-strong:var(--ink-900);       /* hand-drawn ink outline */
+
+  --link:         var(--sky-600);
+  --link-hover:   var(--ink-900);
+
+  --brand:        var(--mustard-300);
+  --brand-ink:    var(--ink-900);       /* text on brand */
+  --brand-soft:   var(--mustard-100);
+
+  --success:      var(--moss-500);
+  --warning:      var(--mustard-400);
+  --danger:       var(--tomato-500);
+
+  /* ---------- TYPOGRAPHY ---------- */
+  /* Display: Fredoka 700 — substitute for the marker-lettered logo */
+  --font-display: 'Fredoka', 'Quicksand', system-ui, sans-serif;
+  /* Body: Poppins — geometric sans, clean, balanced, highly versatile.
+     Used for body copy, product descriptions, secondary nav, and small text. */
+  --font-body:    'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  /* Hand: Kalam — for "stitched in" handwritten captions, tags, doodled notes */
+  --font-hand:    'Kalam', 'Caveat', cursive;
+  /* Mono: for SKUs, dimensions, order numbers */
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Type scale — modular, ratio 1.25 */
+  --fs-xs:   0.75rem;   /* 12 */
+  --fs-sm:   0.875rem;  /* 14 */
+  --fs-md:   1rem;      /* 16 */
+  --fs-lg:   1.125rem;  /* 18 */
+  --fs-xl:   1.375rem;  /* 22 */
+  --fs-2xl:  1.75rem;   /* 28 */
+  --fs-3xl:  2.25rem;   /* 36 */
+  --fs-4xl:  3rem;      /* 48 */
+  --fs-5xl:  4rem;      /* 64 */
+  --fs-6xl:  5.5rem;    /* 88 */
+
+  --lh-tight:  1.05;
+  --lh-snug:   1.2;
+  --lh-body:   1.55;
+  --lh-loose:  1.75;
+
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+  --tracking-caps: 0.12em;
+
+  /* ---------- SPACING (4-pt rhythm) ---------- */
+  --sp-0: 0;
+  --sp-1: 0.25rem;   /* 4 */
+  --sp-2: 0.5rem;    /* 8 */
+  --sp-3: 0.75rem;   /* 12 */
+  --sp-4: 1rem;      /* 16 */
+  --sp-5: 1.5rem;    /* 24 */
+  --sp-6: 2rem;      /* 32 */
+  --sp-7: 3rem;      /* 48 */
+  --sp-8: 4rem;      /* 64 */
+  --sp-9: 6rem;      /* 96 */
+
+  /* ---------- RADII — rounded, soft, never sharp ---------- */
+  --r-xs: 6px;
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-pill: 999px;
+  --r-blob: 24px 30px 22px 28px / 28px 22px 30px 24px; /* hand-cut feel */
+
+  /* ---------- SHADOWS — soft, paper, no harsh drops ---------- */
+  --shadow-sticker:  0 2px 0 rgba(18,18,18,0.9);                /* offset ink line */
+  --shadow-card:     0 2px 0 rgba(18,18,18,0.9), 0 8px 24px rgba(31,134,173,0.10);
+  --shadow-lift:     0 4px 0 rgba(18,18,18,0.9), 0 18px 40px rgba(31,134,173,0.18);
+  --shadow-soft:     0 6px 24px rgba(18,18,18,0.06);
+
+  /* ---------- BORDERS ---------- */
+  --bw-1: 1.5px;
+  --bw-2: 2.5px;
+  --bw-3: 3.5px;   /* signature inked outline */
+
+  /* ---------- MOTION ---------- */
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-bounce:   cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast: 120ms;
+  --dur-base: 220ms;
+  --dur-slow: 420ms;
+}
+
+/* ============================================================
+   SEMANTIC TYPE CLASSES — use these on real elements
+   ============================================================ */
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  line-height: var(--lh-body);
+  color: var(--fg);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, .h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(var(--fs-4xl), 5vw + 1rem, var(--fs-6xl));
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg);
+  margin: 0 0 var(--sp-5);
+}
+
+h2, .h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(var(--fs-3xl), 3vw + 0.5rem, var(--fs-5xl));
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 var(--sp-4);
+}
+
+h3, .h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-2xl);
+  line-height: var(--lh-snug);
+  margin: 0 0 var(--sp-3);
+}
+
+h4, .h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-xl);
+  line-height: var(--lh-snug);
+  margin: 0 0 var(--sp-3);
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: var(--fs-xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--mustard-500);
+}
+
+.lead {
+  font-family: var(--font-body);
+  font-size: var(--fs-lg);
+  line-height: var(--lh-loose);
+  color: var(--fg-soft);
+}
+
+p, .p {
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  line-height: var(--lh-body);
+  color: var(--fg-soft);
+  margin: 0 0 var(--sp-4);
+}
+
+small, .small {
+  font-size: var(--fs-sm);
+  color: var(--fg-muted);
+}
+
+.caption {
+  font-family: var(--font-hand);
+  font-weight: 400;
+  font-size: var(--fs-lg);
+  color: var(--ink-700);
+  transform: rotate(-2deg);
+  display: inline-block;
+}
+
+.handwritten {
+  font-family: var(--font-hand);
+  font-weight: 700;
+}
+
+.mono, code, kbd {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--mustard-300);
+  transition: color var(--dur-fast) var(--ease-out-soft),
+              text-decoration-color var(--dur-fast) var(--ease-out-soft);
+}
+a:hover { color: var(--link-hover); text-decoration-color: var(--ink-900); }
+
+::selection { background: var(--mustard-200); color: var(--ink-900); }
