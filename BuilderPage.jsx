@@ -16,7 +16,7 @@ const BuilderPage = ({ onAddToCart }) => {
     );
   };
 
-  const basePrice = 78;
+  const basePrice = 35;
   const fabricUp = { linen: 0, gingham: 6, stripe: 4, polka: 4, floral: 8, denim: 6, mustard: 2, pink: 2 }[fabric];
   const total = basePrice + fabricUp + patches.length * 4;
 

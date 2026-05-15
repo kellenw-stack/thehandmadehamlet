@@ -50,7 +50,7 @@ const ShopPage = ({ onNav, onAddToCart }) => {
               }}
             >
               Pick the fabric. Pick the strap. Pin on the patches that say something
-              about you. We sew the whole thing in a small workshop in Vermont — every
+              about you. We sew the whole thing in a small workshop in Washington — every
               one is a one-of-one.
             </p>
             <div style={{ display: 'flex', gap: 14, marginTop: 32, alignItems: 'center' }}>
@@ -98,7 +98,7 @@ const ShopPage = ({ onNav, onAddToCart }) => {
             fabric="linen"
             strap="mustard"
             patches={['star']}
-            price="$84"
+            price="$41"
             tag={{ label: 'new!', color: 'mustard', rot: -8 }}
             onClick={() => onAddToCart('Saturday')}
           />
@@ -108,8 +108,8 @@ const ShopPage = ({ onNav, onAddToCart }) => {
             fabric="gingham"
             strap="pink"
             patches={['heart', 'flower']}
-            price="$92"
-            crossed="$108"
+            price="$49"
+            crossed="$65"
             tag={{ label: '3 left', color: 'pink', rot: -6 }}
             onClick={() => onAddToCart('Picnic')}
           />
@@ -119,7 +119,7 @@ const ShopPage = ({ onNav, onAddToCart }) => {
             fabric="polka"
             strap="ink"
             patches={['skull', 'bolt']}
-            price="$88"
+            price="$45"
             tag={{ label: 'not 2B', color: 'sky', rot: 4 }}
             onClick={() => onAddToCart('Understudy')}
           />
@@ -129,7 +129,7 @@ const ShopPage = ({ onNav, onAddToCart }) => {
             fabric="floral"
             strap="rope"
             patches={['bee', 'flower']}
-            price="$96"
+            price="$53"
             onClick={() => onAddToCart('Field Trip')}
           />
           <ProductCard
@@ -138,7 +138,7 @@ const ShopPage = ({ onNav, onAddToCart }) => {
             fabric="denim"
             strap="mustard"
             patches={['brave']}
-            price="$84"
+            price="$41"
             onClick={() => onAddToCart('Workwear')}
           />
           <ProductCard
@@ -147,7 +147,7 @@ const ShopPage = ({ onNav, onAddToCart }) => {
             fabric="mustard"
             strap="ink"
             patches={['moon', 'star']}
-            price="$80"
+            price="$37"
             tag={{ label: 'best seller', color: 'moss', rot: -3 }}
             onClick={() => onAddToCart('Sundae')}
           />
@@ -163,7 +163,7 @@ const ShopPage = ({ onNav, onAddToCart }) => {
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 32 }}>
             <Step n="1" title="Sketch it" body="Pick fabric, strap, patches. Drag them around until it feels like yours." />
-            <Step n="2" title="We stitch it" body="Your sketch lands on a real workbench in Vermont. One person, start to finish." />
+            <Step n="2" title="We stitch it" body="Your sketch lands on a real workbench in Washington. One person, start to finish." />
             <Step n="3" title="It shows up" body="Ten days later it's at your door, packed in a reusable cotton bag." />
           </div>
         </div>
@@ -287,7 +287,7 @@ const Footer = () => (
         — to be, or not 2B —
       </div>
       <div style={{ fontFamily: 'var(--font-body)', fontSize: 13, color: 'var(--ink-300)' }}>
-        © 2026 · stitched in Vermont
+        © 2026 · stitched in Washington
       </div>
     </div>
   </footer>
