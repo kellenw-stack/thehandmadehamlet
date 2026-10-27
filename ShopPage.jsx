@@ -154,6 +154,38 @@ const ShopPage = ({ onNav, onAddToCart }) => {
         </div>
       </section>
 
+      {/* PHOTO SECTION */}
+      <section style={{ background: 'var(--sky-200)', borderTop: '2.5px solid var(--ink-900)', borderBottom: '2.5px solid var(--ink-900)', padding: '70px 40px' }}>
+        <div style={{ maxWidth: 1180, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 60, alignItems: 'center' }}>
+          <div style={{ position: 'relative' }}>
+            <img
+              src="./assets/photo-kids.jpg"
+              alt="Two kids wearing Handmade Hamlet fanny packs"
+              style={{
+                width: '100%',
+                borderRadius: 24,
+                border: '2.5px solid var(--ink-900)',
+                boxShadow: '0 6px 0 rgba(18,18,18,0.9)',
+                display: 'block',
+              }}
+            />
+            <Badge color="pink" rotate={-5} style={{ position: 'absolute', bottom: -18, left: 24, fontSize: 15, padding: '6px 18px' }}>
+              seen in the wild ♥
+            </Badge>
+          </div>
+          <div>
+            <Eyebrow style={{ marginBottom: 14 }}>Real kids, real packs</Eyebrow>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 'clamp(28px, 3vw, 44px)', margin: '0 0 20px', letterSpacing: '-0.02em', lineHeight: 1.05 }}>
+              One of one — just like them.
+            </h2>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: 18, lineHeight: 1.65, color: 'var(--ink-700)', margin: '0 0 28px', maxWidth: 440 }}>
+              Every pack that leaves our workbench is the only one of its kind. Same fabric bolt, same strap color — but the patches, the name on the tag, the story it tells? That part's theirs alone.
+            </p>
+            <Caption rotate={-1.5}>— hand-stitched in Washington</Caption>
+          </div>
+        </div>
+      </section>
+
       {/* PROCESS STRIP */}
       <section style={{ background: 'var(--mustard-100)', borderTop: '2.5px solid var(--ink-900)', borderBottom: '2.5px solid var(--ink-900)', padding: '60px 40px' }}>
         <div style={{ maxWidth: 1180, margin: '0 auto' }}>
